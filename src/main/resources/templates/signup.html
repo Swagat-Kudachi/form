@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8"/>
+<title>this is home page</title>
+</head>
+
+<body>
+<section>
+
+<div class="container">
+<div class="row">
+<div class="col-md-8 offset-md-2">
+<div class="my-card mt-2">
+<h1 class="text-center">Register Here</h1>
+<form th:action="@{/do_register}" method="post" th:object="${user}">
+<!-- username field -->
+
+<div class="form-group">
+    <label for="namefeild">User Name</label>
+    <input name="userName" type="text" class="form-control" id="namefeild" aria-describedby="emailHelp" placeholder="Enter Here"  required>
+  </div>
+
+<!-- codelanguage field -->
+
+<div class="form-group">
+    <label for="codelanguagefeild">Prefered Code Language</label>
+    <input name="preferedCodeLanguage" type="text" class="form-control" id="codelanguagefeild" aria-describedby="emailHelp" placeholder="Enter Here" required>
+  </div>
+  
+  <!-- stdin field -->
+
+<div class="form-group">
+    <label for="stdinfeild">Standard Input(stdin)</label>
+    <input name="standardInput" type="text" class="form-control" id="stdinfeild" aria-describedby="emailHelp" placeholder="Enter Here" required>
+  </div>
+  
+  <!-- code field -->
+  
+  <div class="form-group">
+ 
+ <textarea  name="sourceCode" placeholder="Write Your Code Here" cols="91" rows="20" ></textarea>
+
+  </div>
+  
+  <div class="container text-center">
+  <button class="btn bg-primary text-white">Submit</button>
+  </div>
+  
+  
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</body>
+
+</html>
